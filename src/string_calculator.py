@@ -5,6 +5,8 @@ def add(input_string: str) -> int:
     result = 0
     if not input_string:
         return result
+    # Replacing \n with comma
+    input_string = input_string.replace("\n", ',')
 
     # Split the input string by commas and iterate over splitted list and calculate sum
     for num in input_string.split(','):
