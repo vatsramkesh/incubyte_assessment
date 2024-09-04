@@ -10,8 +10,10 @@ def add(input_string: str) -> int:
 
     # Split the input string by commas and iterate over splitted list and calculate sum
     for num in input_string.split(','):
-        # Since input is a string, so converting individual element to int
-        result += int(num)
+        # If condition to handle , at the end of input string
+        if num:
+            # Since input is a string, so converting individual element to int
+            result += int(num)
     
     return result
 

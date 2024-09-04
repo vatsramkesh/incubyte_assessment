@@ -22,3 +22,7 @@ class TestStringCalculator(unittest.TestCase):
     def test_add_with_new_line_between_numbers(self):
         result = add("1\n2,3")
         self.assertEqual(result, 6)
+
+    def test_add_with_new_line_between_and_end_of_numbers(self):
+        result = add("1\n2,3, 6\n")
+        self.assertEqual(result, 12)
